@@ -5,6 +5,12 @@
     align-items: center;
 }
 
+#graph {
+    display: none;
+    margin: auto;
+    margin-top: 4vh;
+}
+
 .dice {
     display: inline-block;
     font-size: 200%;

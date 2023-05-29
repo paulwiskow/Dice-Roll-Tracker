@@ -24,10 +24,6 @@ const reset = () => {
         [11, 0],
         [12, 0],
     ]);
-
-    document.getElementById("graph").style.display = "none";
-    document.getElementById("update").style.display = "flex";
-    document.getElementById("goto").style.visibility = "visible";
 }
 
 const diceClicked = (dice) => {
@@ -38,20 +34,38 @@ const diceClicked = (dice) => {
 
 const createChart = () => {
     document.getElementById("update").style.display = "none";
-    document.getElementById("graph").style.display = "flex";
-    document.getElementById("goto").style.visibility = "hidden";
+    document.getElementById("graph").style.display = "inline-block";
+    document.getElementById("goto").style.display = "none";
 
-    let arr = new Array();
-    for (const num of rolls.values()) {
-        arr.append(num);
+    let arr = [];
+    for (const elem of rolls.values()) {
+        arr.push(elem);
     }
+
     let canvas = document.getElementById("dicestats");
     let config = {
         type: "bar",
         data: {
-            label: ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
-            datasets: [{label: "Freqency of Dice Rolls", data: arr}]
-        }
+            labels: ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+            datasets: [{
+                label: "Freqency of Dice Rolls", 
+                data: arr,
+                backgroundColor: [
+                    "rgb(0, 0, 0)",
+                    "rgb(0, 0, 0)",
+                    "rgb(0, 0, 0)",
+                    "rgb(0, 0, 0)",
+                    "rgb(0, 0, 0)",
+                    "rgb(0, 0, 0)",
+                    "rgb(0, 0, 0)",
+                    "rgb(0, 0, 0)",
+                    "rgb(0, 0, 0)",
+                    "rgb(0, 0, 0)",
+                    "rgb(0, 0, 0)",
+                ],
+            }],
+        },
+        
     };
 
     let diceChart = new Chart(canvas, config);
