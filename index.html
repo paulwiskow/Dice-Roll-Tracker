@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Catan Tracker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
     <script src="scripts/main.js"></script>
     <link rel="stylesheet" href="style/style.css">
 </head>
@@ -41,6 +42,15 @@
         <div id="twelve" class="dice">
             <p>12</p>
         </div>
+    </div>
+
+    <div id="graph">
+        <canvas id="dicestats"></canvas>
+    </div>
+
+    <div id="finish">
+        <button id="reset" onclick="reset()">Reset</button>
+        <button id="goto" onclick="createChart()">End Game!</button>
     </div>
 </body>
 </html> 
