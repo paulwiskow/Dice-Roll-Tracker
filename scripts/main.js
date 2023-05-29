@@ -5,6 +5,10 @@ const initialize = () => {
         dice.addEventListener("click", e => diceClicked(dice));
     }
 
+    reset();
+}
+
+const reset = () => {
     rolls = new Map([
         [2, 0],
         [3, 0],
