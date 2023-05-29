@@ -1,0 +1,14 @@
+#update {
+    display:flex;
+    height: 25vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.dice {
+    display: inline-block;
+    font-size: 200%;
+    padding: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
