@@ -50,3 +50,11 @@
     margin-left: 5%;
     margin-right: 5%;
 }
+
+#spooky, #boo, #booimg {
+    display: none;
+}
+
+#boo {
+    opacity: 0;
+}

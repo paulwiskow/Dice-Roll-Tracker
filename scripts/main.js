@@ -35,7 +35,9 @@ const diceClicked = (dice) => {
 const createChart = () => {
     document.getElementById("update").style.display = "none";
     document.getElementById("graph").style.display = "inline-block";
-    document.getElementById("goto").style.display = "none";
+    document.getElementById("finish").style.display = "none";
+    document.getElementById("spooky").style.display = "block";
+    document.getElementById("boo").style.display = "inline";
 
     let arr = [];
     for (const elem of rolls.values()) {
@@ -71,3 +73,6 @@ const createChart = () => {
     let diceChart = new Chart(canvas, config);
 }
 
+const spooky = () => {
+    document.getElementById("booimg").style.display = "block";
+}
