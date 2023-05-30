@@ -74,5 +74,5 @@ const createChart = () => {
 }
 
 const spooky = () => {
-    document.getElementById("booimg").style.display = "block";
+    document.body.style.backgroundImage = "url('IMG_2434.png')";
 }
