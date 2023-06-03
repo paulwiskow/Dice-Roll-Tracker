@@ -1,4 +1,5 @@
 let rolls;
+let curElement = null;
 
 const initialize = () => {
     for (let dice of document.getElementsByClassName("dice")) {
@@ -27,6 +28,12 @@ const reset = () => {
 }
 
 const diceClicked = (dice) => {
+    dice.style.borderColor = "rgb(185, 47, 47)";
+    if (curElement != null) {
+        curElement.style.borderColor = "rgb(29, 25, 19)";
+    }
+
+    curElement = dice;
     let key = Number(dice.textContent);
     rolls.set(key, rolls.get(key) + 1);
     console.log(rolls.get(key));
