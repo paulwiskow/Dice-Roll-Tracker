@@ -46,7 +46,7 @@
     align-items: center;
 }
 
-#reset, #goto {
+#reset, #goto, #rollNum {
     margin-left: 5%;
     margin-right: 5%;
 }
