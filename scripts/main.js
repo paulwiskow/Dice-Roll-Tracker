@@ -1,6 +1,5 @@
 let rolls;
 let curElement = null;
-let toggle = false;
 
 const initialize = () => {
     for (let dice of document.getElementsByClassName("dice")) {
@@ -36,19 +35,9 @@ const diceClicked = (dice) => {
     curElement = dice;
 
     let key;
-    if (toggle) {
-        let arr = dice.textContent.split(" ");
-        console.log(arr);
-        key = Number(arr[0]);
-        console.log(key);
-    } else {
-        key = Number(dice.textContent);
-    }
+    key = Number(dice.textContent);
 
     rolls.set(key, rolls.get(key) + 1);
-    if (toggle) {
-        dice.textContent = key + " (" + rolls.get(key) + ")";
-    }
     console.log(rolls.get(key));
 }
 
@@ -91,25 +80,6 @@ const createChart = () => {
     };
 
     let diceChart = new Chart(canvas, config);
-}
-
-const toggleDiceNum = () => {
-    toggle = !toggle;
-    if (toggle) {
-        let i = 2;
-        for (let dice of document.getElementsByClassName("dice")) {
-            // dice.style.fontSize = "150%";
-            dice.textContent = dice.textContent + " (" + rolls.get(i) + ")";
-            i++;
-        }
-    } else {
-        let i = 2;
-        for (let dice of document.getElementsByClassName("dice")) {
-            // dice.style.fontSize = "200%";
-            dice.textContent = i;
-            i++;
-        }
-    }
 }
 
 const spooky = () => {
