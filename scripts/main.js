@@ -28,11 +28,13 @@ const reset = () => {
 }
 
 const diceClicked = (dice) => {
+    let para = document.getElementById("line");
     dice.style.borderColor = "rgb(185, 47, 47)";
     if (curElement != null && curElement != dice) {
         curElement.style.borderColor = "rgb(29, 25, 19)";
     }
     curElement = dice;
+    para.textContent = para.textContent + " " + dice.textContent;
 
     let key;
     key = Number(dice.textContent);
